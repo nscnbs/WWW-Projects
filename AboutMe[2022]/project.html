@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekty</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <main class="project">
+            <article class="desc_p">
+              <h1>ENGLISH BOT ON TELEGRAM</h1>
+              <p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web browser today!</p>
+            </article>
+            <article class="desc_p">
+                <h2>Możliwości</h2>
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </article>
+            <article class="desc_p">
+              <h2>Najbardziej spektakularny fragment kodu</h2>
+              <p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced Internet Explorer.</p>
+              <pre>
+class MainActivity : AppCompatActivity() {
+
+    private var r1 = 0
+    private var r2 = 0
+    private var score = 0
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        score = 0
+        roll()
+    }
+
+    fun roll(){
+        findViewById<TextView>(R.id.points).text = "Punkty: " + score
+        r1 = Random.nextInt(10)
+        r2 = Random.nextInt(10)
+        findViewById<TextView>(R.id.leftClick).text = "" + r1
+        findViewById<TextView>(R.id.rightClick).text = "" + r2
+    }
+
+    fun buttonLeft(view: View) {
+        if (r1>=r2){
+            score++
+            Toast.makeText(this, "Dobrze!!!", Toast.LENGTH_SHORT).show()
+        }
+        else{
+            score--
+            Toast.makeText(this, "Źle!!!", Toast.LENGTH_SHORT).show()
+        }
+        roll()
+    }
+    fun buttonRight(view: View) {
+        if (r1<=r2){
+            score++
+            Toast.makeText(this, "Dobrze!!!", Toast.LENGTH_SHORT).show()
+        }
+        else{
+            score--
+            Toast.makeText(this, "Źle!!!", Toast.LENGTH_SHORT).show()
+        }
+        roll()
+    }
+}<pre>
+            </article>
+        </main>
+    </div>
+    <nav>
+        <div class="margin"></div>
+        <input type="checkbox" name="dropdown" id="dropdown-button">
+        <label for="dropdown-button" class="no-select">MENU</label>
+        <ul>
+            <li>
+                <a href="index.html">O mnie</a>
+            </li>
+            <li>
+                Projekty:
+                <ul>
+                    <li>
+                        <a href="project.html">ENGLISH BOT</a>
+                    </li>
+                    <li>
+                        <a href="project2.html">Project_2</a>
+                    </li>
+                    <li>
+                        <a href="project3.html">Project_3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="science.html">Science</a>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

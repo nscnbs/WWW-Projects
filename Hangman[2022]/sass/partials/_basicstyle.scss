@@ -1,0 +1,123 @@
+:root { /*deklaracja zmiennych CSS*/
+    --bgcolor: #{$body_primary_background_color}; //uwaga na interpolację, jeżeli mają być użyte zmienne sass
+  }
+
+body{
+    //background: $main_background_color;
+    background: var(--bgcolor);  //wykorzystanie zmiennych CSS
+}
+
+
+main {
+    margin: 0;
+    padding: 5px;
+    background-color: $main_primary_background_color;
+  
+    & > h1, p, .desc, .desc_p, .desc_s {
+      margin: 10px;
+      padding: 5px;
+    }
+}
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+    font-family: $standart_font_style;
+    @include mq(M) {
+        display: flex;
+        flex-direction: column;
+    }
+  }
+  
+  .desc {
+    background: $desc_primary_background_color;
+    & > h2, p {
+        margin: 4px;
+        font-size: 90%;
+    }
+  }
+
+  .desc_p {
+    background-color: $desc_projects_background_color;
+    & > h2, p {
+        margin: 4px;
+        font-size: 90%;
+    }
+  }
+
+  .desc_s {
+    background-color: $desc_science_background_color;
+    & > p {
+        margin: 4px;
+        font-size: 90%;
+    }
+  }
+
+
+  footer {
+    text-align: center;
+    padding: 3px;
+    background-color: $footer_primary_background_color;
+    color: $footer_text_color;
+  }
+  
+  a.footer {
+    color: wheat;
+  }
+  
+  img {
+    width: 100px;
+    border-radius: 100px;
+    float: right;
+    margin-right: 10px;
+  }
+  
+  h1.name {
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  pre {
+    color: $pre_color;
+    page-break-inside: avoid;
+    font-family: monospace;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow-y: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+  }
+  
+aside {
+    width: 30%;
+    padding-left: 15px;
+    margin-left: 15px;
+    float: right;
+    font-style: italic;
+    background-color: $main_primary_background_color;
+    @include mq(M) {
+        width: 60%;
+        padding-left: 45px;
+    }
+}
+
+/**
+ * Funkcja dla kolorów
+ */
+ @for $i from 1 through 15 {
+  .lighter:nth-of-type(#{$i}) {
+    background-color: hsl($i*24, 50%, 50%);
+    border: solid;
+    margin: .2*$standardPadding;
+  }
+}
+
+@each $color in $color-list {
+  $i: index($color-list, $color);
+  .section-#{'' + $color} {
+    background-color: rgba($color, .4);
+  }
+}

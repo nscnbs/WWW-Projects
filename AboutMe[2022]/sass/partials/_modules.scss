@@ -1,0 +1,56 @@
+/**
+Menu
+**/
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: $menu_background_color;
+
+    & > .margin {
+        height: 30px;
+    }
+  
+    & > input[type=checkbox] {
+        display: none;
+        & + label{
+            display: block;
+            padding: 0 10px;
+            min-width: 30px;
+            height: 30px;
+            background: $menu_label_color;
+            position: absolute;
+            top: 0;
+            right: 0;
+            text-align: center;
+            line-height: 30px;
+            font-family: $standart_font_style;
+            &:hover {
+                background: $menu_onClick_color;
+            }
+            & + ul {
+                display: none;
+            }
+        }
+        &:checked + label + ul {
+            display: block;
+        }
+    }
+  
+    & > ul {
+        width: 150px;
+        height: 200px;
+        overflow-y: auto;
+        margin-right: 25px;
+        & > li {
+            margin-top: 20px;
+        }
+    }
+
+    @media (max-width: map-get($breakpoints, 'M')) {
+        & > ul {
+          width: calc(100vw - 65px);
+        }
+    }
+}
+

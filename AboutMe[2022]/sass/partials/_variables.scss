@@ -1,0 +1,37 @@
+/**
+Colors
+**/
+$body_primary_background_color: rgb(33, 46, 60);
+
+$main_primary_background_color: lightgray;
+
+$desc_primary_background_color: white;
+$desc_projects_background_color: rgb(76, 113, 180);
+$desc_science_background_color: rgb(173, 59, 177);
+
+$footer_primary_background_color: rgba(255, 0, 0, 0.507);
+
+$footer_text_color: white;
+
+$pre_color: #00f8c2;
+
+$menu_background_color: lightgray;
+$menu_label_color: lightgray;
+$menu_onClick_color: rgba(255, 0, 0, 0.507);
+
+/**
+Fonts
+**/
+
+$standart_font_style: "Lucida Handwriting", cursive;
+
+/**
+Maps
+**/
+
+$breakpoints: (
+    S: 400px,
+    M: 600px,
+    L: 1028px
+);
+//map-get($breakpoints, 'S');

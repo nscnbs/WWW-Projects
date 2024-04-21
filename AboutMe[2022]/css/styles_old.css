@@ -1,0 +1,182 @@
+body {
+  margin: 0 auto;
+  width: 50%;
+}
+
+@media (max-width: 1024px) {
+  body {
+    margin: 0 auto;
+    width: 70%;
+  }
+}
+@media (max-width: 600px) {
+  body {
+    margin: 0 auto;
+    width: 85%;
+  }
+}
+body {
+  background-color: rgb(33, 46, 60);
+}
+
+main {
+  margin: 0;
+  padding: 5px;
+  background-color: lightgray;
+}
+
+main > h1, p, .desc, .desc_p, .desc_s {
+  margin: 10px;
+  padding: 5px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  font-family: "Lucida Handwriting", cursive;
+}
+
+@media (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.desc {
+  background: white;
+}
+
+.desc > h2, p {
+  margin: 4px;
+  font-size: 90%;
+}
+
+.desc_p {
+  background-color: rgb(76, 113, 180);
+}
+
+.desc_p > h2, p {
+  margin: 4px;
+  font-size: 90%;
+}
+
+.desc_s {
+  background-color: rgb(173, 59, 177);
+}
+
+.desc_s > p {
+  margin: 4px;
+  font-size: 90%;
+}
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: rgba(255, 0, 0, 0.507);
+  color: white;
+}
+
+a.footer {
+  color: wheat;
+}
+
+img {
+  width: 100px;
+  border-radius: 100px;
+  float: right;
+  margin-right: 10px;
+}
+
+h1.name {
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+}
+
+pre {
+  color: #00f8c2;
+  page-break-inside: avoid;
+  font-family: monospace;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow-y: auto;
+  padding: 1em 1.5em;
+  display: block;
+  word-wrap: break-word;
+}
+
+aside {
+  width: 30%;
+  padding-left: 15px;
+  margin-left: 15px;
+  float: right;
+  font-style: italic;
+  background-color: lightgray;
+}
+
+@media (max-width: 600px) {
+  aside {
+    width: 60%;
+    padding-left: 45px;
+  }
+}
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: rgb(195, 196, 197);
+}
+
+nav > .margin {
+  height: 30px;
+}
+
+nav > input[type=checkbox] {
+  display: none;
+}
+
+nav > input[type=checkbox] + label {
+  display: block;
+  padding: 0 10px;
+  min-width: 30px;
+  height: 30px;
+  background: rgb(194, 187, 187);
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  line-height: 30px;
+  font-family: "Lucida Handwriting", cursive;
+}
+
+nav > input[type=checkbox] + label:hover {
+  background: rgba(255, 0, 0, 0.507);
+}
+
+nav > input[type=checkbox] + label + ul {
+  display: none;
+}
+
+nav > input[type=checkbox]:checked + label + ul {
+  display: block;
+}
+
+nav > ul {
+  width: 150px;
+  height: 200px;
+  overflow-y: auto;
+  margin-right: 25px;
+}
+
+nav > ul > li {
+  margin-top: 20px;
+}
+
+@media (max-width: 500px) {
+  nav > ul {
+    width: calc(100vw - 65px);
+  }
+}
+
+/*# sourceMappingURL=styles_old.css.map */
